@@ -23,4 +23,9 @@ import taskRouter from './routes/tasks.route.js';
 app.use('/api/v1/users', userRouter);
 app.use('/api/v1/tasks', verifyJWT, taskRouter);
 
+// Home route
+app.get('/', (req, res) => {
+    res.status(200).send('Home');
+})
+
 export default app;
